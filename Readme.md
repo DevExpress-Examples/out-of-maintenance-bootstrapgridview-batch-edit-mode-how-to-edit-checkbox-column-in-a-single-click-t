@@ -1,3 +1,11 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [Default.aspx](./CS/Default.aspx) (VB: [Default.aspx.vb](./VB/Default.aspx.vb))
+* [Default.aspx.cs](./CS/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/Default.aspx.vb))
+* [Global.asax](./CS/Global.asax) (VB: [Global.asax](./VB/Global.asax))
+* [Site.master.cs](./CS/Site.master.cs) (VB: [Site.master.vb](./VB/Site.master.vb))
+<!-- default file list end -->
 # BootstrapGridView - Batch Edit mode - How to edit CheckBox column in a single click
 
 
