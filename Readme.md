@@ -7,6 +7,9 @@
 * [Site.master.cs](./CS/Site.master.cs) (VB: [Site.master.vb](./VB/Site.master.vb))
 <!-- default file list end -->
 # [OBSOLETE] BootstrapGridView - Batch Edit mode - How to edit CheckBox column in a single click
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/t520290/)**
+<!-- run online end -->
 
 
 **Starting with v17.1.4 and v17.2.3**, the BootstrapGridView control supports this functionality out of the box. To get the desired behavior, enable the AlwaysShowCheckboxesInCheckColumns property:
