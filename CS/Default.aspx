@@ -1,36 +1,15 @@
 <%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.master" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Content" runat="server">
-    <script>
-        function initCheckboxes(s, e) {
-            var checkboxes = s.GetMainElement().querySelectorAll("[data-toggle=display-cb]");
-            for (var i = 0, cb; cb = checkboxes[i]; i++) {
-                onCheckboxClick(s, cb);
-            }
-        }
-        function onCheckboxClick(grid, cb) {
-            cb.addEventListener("change", function(e) {
-                var rowIndex = parseInt(cb.getAttribute("data-ri"));
-                var colIndex = parseInt(cb.getAttribute("data-ci"));
-                grid.batchEditApi.SetCellValue(rowIndex, colIndex, !!cb.checked);
-            });
-        }
-        function onBatchEditStartEditing(s, e) {
-            if (e.focusedColumn.fieldName == 'Discontinued') e.cancel = true;
-        }
-</script>
     <dx:BootstrapGridView runat="server" ID="GridView1" ClientInstanceName="GridView1" OnRowUpdating="GridView1_RowUpdating" OnRowInserting="GridView1_RowInserting" OnRowDeleting="GridView1_RowDeleting"
         KeyFieldName="ProductID" DataSourceID="AccessDataSource1">
-        <ClientSideEvents Init="initCheckboxes" BatchEditStartEditing="onBatchEditStartEditing" EndCallback="initCheckboxes" />
-        <SettingsEditing Mode="Batch" BatchEditSettings-StartEditAction="Click"></SettingsEditing>
+        <SettingsEditing Mode="Batch">
+            <BatchEditSettings AlwaysShowCheckboxesInCheckColumns="true"  StartEditAction="Click" />
+        </SettingsEditing>
         <SettingsDataSecurity AllowEdit="True" />
         <Columns>
-            <dx:BootstrapGridViewDataColumn FieldName="ProductName" HorizontalAlign="Left"></dx:BootstrapGridViewDataColumn>
-            <dx:BootstrapGridViewDataColumn FieldName="Discontinued" Width="75">
-                <DataItemTemplate>
-                    <input type="checkbox" <%# Container.VisibleIndex> -1 && (bool)Eval("Discontinued") ? "checked" : ""  %> data-toggle="display-cb" data-ri="<%# Container.VisibleIndex %>" data-ci="<%# Container.Column.VisibleIndex %>" />
-                </DataItemTemplate>
-            </dx:BootstrapGridViewDataColumn>
+            <dx:BootstrapGridViewDataColumn FieldName="ProductName" HorizontalAlign="Left"/>
+            <dx:BootstrapGridViewDataColumn FieldName="Discontinued" Width="75"/>
         </Columns>
     </dx:BootstrapGridView>
 
