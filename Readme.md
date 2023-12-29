@@ -1,8 +1,3 @@
-<!-- default badges list -->
-![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/128548983/17.1.3%2B)
-[![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T520290)
-[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
-<!-- default badges end -->
 <!-- default file list -->
 *Files to look at*:
 
@@ -12,9 +7,6 @@
 * [Site.master.cs](./CS/Site.master.cs) (VB: [Site.master.vb](./VB/Site.master.vb))
 <!-- default file list end -->
 # [OBSOLETE] BootstrapGridView - Batch Edit mode - How to edit CheckBox column in a single click
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/t520290/)**
-<!-- run online end -->
 
 
 **Starting with v17.1.4 and v17.2.3**, the BootstrapGridView control supports this functionality out of the box. To get the desired behavior, enable the AlwaysShowCheckboxesInCheckColumns property:
